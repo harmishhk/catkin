@@ -139,6 +139,7 @@ foreach(filename
     test/download_test_data
     test/gtest
     test/nosetests
+    test/catch
     tools/doxygen
     tools/libraries
     tools/rt
