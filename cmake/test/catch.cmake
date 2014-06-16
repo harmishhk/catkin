@@ -44,7 +44,6 @@ function(catkin_add_catchtest target)
 
   # we DONT use rosunit to call the executable to get process control
   get_target_property(_target_path ${target} RUNTIME_OUTPUT_DIRECTORY)
-  # TODO: fix xml generation: does not work becasue of root attribute error
   #set(cmd "${_target_path}/${target}")
   set(cmd "${_target_path}/${target} -r=junit -o=${CATKIN_TEST_RESULTS_DIR}/${PROJECT_NAME}/catchtest-${target}.xml")
   catkin_run_tests_target("catchtest" ${target} "catchtest-${target}.xml" COMMAND ${cmd} DEPENDENCIES ${target} WORKING_DIRECTORY ${_catchtest_WORKING_DIRECTORY})
