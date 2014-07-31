@@ -34,7 +34,7 @@ function(catkin_add_catchtest target)
 
   # parse for optional arguments
   cmake_parse_arguments(_catchtest "" "WORKING_DIRECTORY" "" ${ARGN})
-  
+
   # create the executable, with catch test build flags
   include_directories(${CATCH_INCLUDE_DIRS})
   add_executable(${target} ${_catchtest_UNPARSED_ARGUMENTS})
